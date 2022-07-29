@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start && -H 0.0.0.0 -p ${PORT:-8080}",
     "lint": "next lint",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export && mv out _static"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
