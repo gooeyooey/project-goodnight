@@ -16,10 +16,10 @@ export default function Page() {
 		Router.push(next_page);
 	}
 
-	// Push the reader to the next page after the last step.
-	if (current_step > total_steps) {
-		Router.push(next_page);
-	}
+	// Increment the reader's step by one.
+	const increment_step = () => {
+		set_step((current_step) => (current_step += 1));
+	};
 
 	// Decrement the reader's step by one.
 	const decrement_step = () => {
